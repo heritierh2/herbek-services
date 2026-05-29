@@ -72,6 +72,24 @@ st.markdown("""
         text-align: center;
     }
 </style>
+""", unsafe_allow_html=True)
+        border-radius: 8px;
+        text-decoration: none;
+        display: inline-block;
+        margin-right: 10px;
+        text-align: center;
+    }
+    .btn-tel {
+        background-color: #007BFF !important;
+        color: white !important;
+        font-weight: bold;
+        padding: 12px 24px;
+        border-radius: 8px;
+        text-decoration: none;
+        display: inline-block;
+        text-align: center;
+    }
+</style>
 """, unsafe_index=True)
 
 # --- SIDEBAR & LOGO ---
