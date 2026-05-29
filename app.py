@@ -73,24 +73,6 @@ st.markdown("""
     }
 </style>
 """, unsafe_allow_html=True)
-        border-radius: 8px;
-        text-decoration: none;
-        display: inline-block;
-        margin-right: 10px;
-        text-align: center;
-    }
-    .btn-tel {
-        background-color: #007BFF !important;
-        color: white !important;
-        font-weight: bold;
-        padding: 12px 24px;
-        border-radius: 8px;
-        text-decoration: none;
-        display: inline-block;
-        text-align: center;
-    }
-</style>
-""", unsafe_index=True)
 
 # --- SIDEBAR & LOGO ---
 with st.sidebar:
@@ -98,13 +80,11 @@ with st.sidebar:
     if os.path.exists(logo_path):
         st.image(logo_path, use_container_width=True)
     else:
-        # En attendant que l'image soit bien placée sur GitHub
         st.title("Herbek Services")
     
     st.caption("EXCELLENCE AU SERVICE DE VOTRE RÉUSSITE")
     st.markdown("---")
     
-    # Navigation interne fluide
     menu = st.radio("Navigation", ["Accueil", "À propos", "Nos Services", "Pourquoi nous", "Contact"])
 
 # --- CONTENU PRINCIPAL ---
@@ -117,7 +97,6 @@ if menu == "Accueil":
     
     st.markdown("<br>", unsafe_allow_html=True)
     
-    # Boutons d'action directs et fonctionnels
     col_btn1, col_btn2 = st.columns([1, 4])
     with col_btn1:
         st.markdown('<a href="https://wa.me/243977777737" target="_blank" class="btn-whatsapp">💬 WhatsApp</a>', unsafe_allow_html=True)
@@ -176,8 +155,6 @@ elif menu == "Contact":
     st.title("Contactez-nous")
     st.write("Une question ou un projet ? Remplissez ce formulaire pour recevoir une réponse rapide par e-mail.")
     
-    # Configuration du formulaire pour envoyer un VRAI e-mail vers contact@herbek-services.com
-    # Utilisation du service sécurisé et gratuit FormSubmit
     form_html = """
     <form action="https://formsubmit.co/contact@herbek-services.com" method="POST" style="background:#1E2235; padding:30px; border-radius:12px; border:1px solid #2B314D;">
         <input type="hidden" name="_subject" value="Nouveau message de votre site web Herbek Services !">
